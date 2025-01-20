@@ -109,7 +109,7 @@ export const migration: T.ExpectedExports.migration = async (
           (config) => {
             return config;
           },
-          true,
+          false,
           { version: "28.0.14", type: "up" },
         ),
         down: () => {
