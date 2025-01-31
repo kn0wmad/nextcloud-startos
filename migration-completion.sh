@@ -2,6 +2,7 @@
 set -e
 
 /var/www/html/occ db:add-missing-indices
+/var/www/html/occ maintenance:repair --include-expensive
 
 mkdir -p /root/migrations
 touch /root/migrations/$NEXTCLOUD_VERSION.complete

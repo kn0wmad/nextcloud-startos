@@ -80,6 +80,7 @@ interfaces:
       - nextcloud
 dependencies: {}
 alerts:
+  install: NOTICE! If Nextcloud gets stuck in a "Stopping..." state, simply reboot your server to fix.
   start: |
     When starting Nextcloud for the first time it may take a few minutes, please be patient! The web interface health check will indicate when the service is ready.
 backup:

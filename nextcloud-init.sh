@@ -45,6 +45,9 @@ echo "Installing default apps..."
 sudo -u www-data -E php /var/www/html/occ app:install calendar
 sudo -u www-data -E php /var/www/html/occ app:install contacts
 
+sudo -u www-data -E php /var/www/html/occ db:add-missing-indices
+sudo -u www-data -E php /var/www/html/occ maintenance:repair --include-expensive
+
 kill -TERM $NCPID
 sleep 60 &
 wait -n $NCPID $!
